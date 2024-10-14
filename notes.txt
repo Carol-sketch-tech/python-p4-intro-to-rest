@@ -1,0 +1,45 @@
+INTRODUCTION TO REST 
+REST - REpresentational state transfer - this is a standardized way for web applications to structure their urls.
+
+REST is an architectureal design pattern not a framework or code in itself.
+
+RESTFUL CONVETIONS IN FLASK.
+flask provides native support for all HTTP requests methods and makes it very easy to define routes with these features
+restful routes fall into farmiliar categories 
+    1. CREATE - create the newsletter instance 
+    2. READ - display a list of all nesletters 
+    3.UPDATE - updates the newletter instance
+    4. DELETE -  delete an exisiting newsletter instance
+
+
+    HTTP REQUEST METHODS AND RESTFUL ROUTES 
+To implement eacj fo the above actions we combine a http request method such as GET, POST with a routes
+flask the maps each methods route combination to the appropraite view in the flask application.
+the below list shows how we can use the RESTful newsletter application
+    1. GET - newletters - shows all newletters
+    2.POST - /newsletters - creates a new newsletter 
+    3. GET - /newsletter/<int:id> - shows specific newsletter
+    4. PATCH or PUT - /newsletter/<int:id> - update a specific newsletter
+    5. DELETE - / newsletter/<int:id> - deletes a specific newsletter
+
+note that in sthe above list even though we have five separeate actions we only have two routes 
+    1./newsletters and 
+    2. /newsletters/<int:id>
+
+flask intergrates RESTFful routes into the system.
+
+
+things to keep in mind.
+1. RESTful is an archtectural design patter not a framework or code itself.by usinf RESTful design principles.
+FLASK apps are able to have a clear and standardized naming structure for routes and actions.
+
+2. RESTful routes have a clear mapping between the URL resouce and the corresponding actions carries out by the backend
+
+3. there are five restful route options we will commonsly use as API developers.
+
+the following are restful route options
+    1. Creaate 
+    2. RETRIECE ALL(index)- displays a list of every instance
+    3. Retrive one - displays an instance of one item.
+    4. update
+    5. Delete
